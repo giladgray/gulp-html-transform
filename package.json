@@ -4,7 +4,8 @@
   "description": "Stream-based HTML transformation library",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require=coffee-script/register test/main.coffee"
+    "test": "mocha --require=coffee-script/register test/main.coffee",
+    "prepublish": "coffee -c index.coffee"
   },
   "repository": {
     "type": "git",

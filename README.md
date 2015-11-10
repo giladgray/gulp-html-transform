@@ -1,4 +1,4 @@
-# gulp-html-transform
+# gulp-html-transform [![Build Status](https://travis-ci.org/giladgray/gulp-html-transform.svg)](https://travis-ci.org/giladgray/gulp-html-transform)
 
 Stream-based HTML transformation library, designed for use with Gulp (object-mode Transform streams).
 
