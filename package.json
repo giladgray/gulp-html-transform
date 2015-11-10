@@ -1,0 +1,37 @@
+{
+  "name": "gulp-html-transform",
+  "version": "0.0.0",
+  "description": "Stream-based HTML transformation library",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require=coffee-script/register test/main.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giladgray/gulp-html-transform.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "gulp",
+    "html",
+    "transform",
+    "parse"
+  ],
+  "author": "Gilad Gray",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/giladgray/gulp-html-transform/issues"
+  },
+  "homepage": "https://github.com/giladgray/gulp-html-transform#readme",
+  "devDependencies": {
+    "coffee-script": "1.10.0",
+    "funsert": "0.1.1",
+    "gulp": "3.9.0",
+    "mocha": "2.3.3",
+    "stream-assert": "2.0.3"
+  },
+  "dependencies": {
+    "cheerio": "0.19.0",
+    "through2-map": "2.0.0"
+  }
+}
