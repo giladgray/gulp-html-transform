@@ -1,4 +1,6 @@
-# gulp-html-transform [![Build Status](https://travis-ci.org/giladgray/gulp-html-transform.svg)](https://travis-ci.org/giladgray/gulp-html-transform)
+# gulp-html-transform
+
+[![Build Status](https://travis-ci.org/giladgray/gulp-html-transform.svg?branch=master)](https://travis-ci.org/giladgray/gulp-html-transform)
 
 Stream-based HTML transformation library, designed for use with Gulp (object-mode Transform streams).
 
@@ -30,6 +32,9 @@ gulp.src('src/*.html')
 
 Parse the `file.contents` to an HTML document and attach it as `file.document`.
 
+
+`file.document` is an instance of Cheerio containing the parsed HTML file (`cheerio.load(file.contents.toString())`). While it's likely easiest to use the transform methods below, after parsing a file you can do whatever you like with the `document`. Please refer to the [Cheerio API](https://github.com/cheeriojs/cheerio#api) for available methods.
+
 #### `html.write()`
 
 Stringify `file.document` back to `file.contents`.
@@ -38,8 +43,9 @@ Stringify `file.document` back to `file.contents`.
 
 Run a generic transformation on `file.document`. Function receives two arguments:
 
-- `$` the root node of the HTML document. Use Cheerio's API to update the document inline.
+- `$` the root node of the HTML document (a Cheerio instance)
 - `filename` the path to the current file
+
 
 ## Transform Helpers
 
@@ -57,7 +63,7 @@ html.transform.contents('article', 'script')
 
 Perform a function for each match of the given selector. Function will be invoked with two arguments:
 
-- `$el` the current element being transformed
+- `$el` the current element being transformed (a Cheerio instance)
 - `filename` the path to the current file
 
 **Example:** Insert anchor tag before each `<h1>` tag
