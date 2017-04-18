@@ -52,7 +52,7 @@ the entire document, or use helpers for common operations.
 transform.contents = (selectors...) ->
   transform ($) ->
     # confine to content selector
-    $('body').html($(selectors.join(', d')))
+    $('body').html($(selectors.join(', ')))
 
 # perform a function for each match of the given selector
 transform.each = (selector, fn) ->
