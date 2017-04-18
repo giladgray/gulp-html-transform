@@ -28,6 +28,8 @@ gulp.src('src/*.html')
 
 ## API
 
+**All methods return object-mode [transform streams](https://github.com/rvagg/through2), a.k.a. Gulp plugins.**
+
 #### `html.parse()`
 
 Parse the `file.contents` to an HTML document and attach it as `file.document`.
